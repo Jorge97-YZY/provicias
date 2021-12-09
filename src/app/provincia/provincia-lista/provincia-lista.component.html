@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="car-header cor">
+      <h1 class="mt-4 pl-3">Provincias</h1>
+    </div>
+    <div class="card-body">
+      <div class="row mb-2">
+        <div class="col-md-4">
+          <button class="btn cor" (click)="novo()" >
+            <i class="fa fa-plus"></i> Novo</button>
+        </div>
+      </div>
+
+      <div class="row container">
+      <table class="table table-condensed table-hover" >
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of provincias">
+            <td>{{ p.id }}</td>
+            <td>{{ p.nome }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <div class="card-footer"></div>
+  </div>
+</div>
+
+</div>

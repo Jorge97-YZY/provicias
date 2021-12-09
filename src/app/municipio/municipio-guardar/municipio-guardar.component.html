@@ -1,0 +1,41 @@
+<h1 class="mt-4"> </h1>
+<ol class="breadcrumb mb-4 cor">
+  <li class="breadcrumb-item active cor"> Cadastro de Municipio</li>
+</ol>
+
+<div class="container">
+  <form [formGroup]="form">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nome">Nome: </label>
+          <input type="text" name="nome" id="nome" class="form-control" formControlName="nome">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nome">Provincia: </label>
+          <div class="input-group mb-3">
+
+            <select class="custom-select" id="inputGroupSelect01" formControlName="provincia">
+              <option selected>Selecionar...</option>
+              <option *ngFor="let p of Provincias" [ngValue]="p" >{{ p.nome}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <button class="btn cor" (click)=" onSubmit()">
+          <i class="fa fa-save"></i> Guardar
+        </button>
+
+      </div>
+    </div>
+  </form>
+</div>

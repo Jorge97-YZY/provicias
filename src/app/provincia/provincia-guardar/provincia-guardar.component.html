@@ -1,0 +1,29 @@
+<h1 class="mt-4"> </h1>
+<ol class="breadcrumb mb-4 cor">
+  <li class="breadcrumb-item active cor"> Cadastro de Provincia</li>
+</ol>
+
+<div class="container">
+  <form [formGroup]="form">
+
+    <div class="row">
+      <div class="col-md-9">
+        <div class="form-group">
+          <label for="nome">Nome: </label>
+          <input type="text" name="nome" id="nome" class="form-control" formControlName="nome">
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <button class="btn cor" (click)=" onSubmit()">
+          <i class="fa fa-save"></i> Guardar
+        </button>
+
+      </div>
+    </div>
+  </form>
+</div>
